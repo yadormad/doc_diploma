@@ -1,0 +1,5 @@
+ngram-1-2 sw lem stem
+1
+corpus\csv\train_min.csv
+testData\csv\test_min.csv
+kn
