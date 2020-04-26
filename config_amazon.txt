@@ -1,0 +1,5 @@
+ngram-1-2 sw lem stem
+1
+corpus\json\train.json overall reviewText 7000
+corpus\json\test.json overall reviewText 1000
+svm

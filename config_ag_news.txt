@@ -1,0 +1,5 @@
+ngram-1-2 sw lem stem
+1
+corpus\csv\ag_news\train.csv 0 2 7000
+corpus\csv\ag_news\test.csv 0 2 1000
+kn

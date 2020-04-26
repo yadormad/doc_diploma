@@ -1,4 +1,4 @@
-from file.csv_reader import CsvReader
+from file.reader import Reader
 from file.vectorizator.tf_idf_vectorizator import TfIdfVectorizator
 from sklearn.metrics import accuracy_score
 from f_measure import fCounter
@@ -18,16 +18,16 @@ def main(argv):
     else:
         confReader = ConfReader()
     
-    trainingSampleReader = CsvReader(
+    trainingSampleReader = Reader(
         confReader.preprocCombiner.generatePreprocArray(),
         TfIdfVectorizator(confReader.useIdf),
-        confReader.trainCsv,
+        confReader.trainData,
     )
 
-    testDataReader = CsvReader(
+    testDataReader = Reader(
         confReader.preprocCombiner.generatePreprocArray(),
         TfIdfVectorizator(confReader.useIdf),
-        confReader.testCsv
+        confReader.testData
     )
 
     trainingSampleReader.readAndPrepareFiles()
